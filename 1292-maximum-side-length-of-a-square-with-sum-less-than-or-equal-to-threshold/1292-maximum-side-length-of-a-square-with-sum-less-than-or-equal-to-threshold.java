@@ -1,43 +1,36 @@
 class Solution {
     public int maxSideLength(int[][] mat, int threshold) {
-        int m = mat.length, n = mat[0].length;
-        int maxSide = Math.min(m,n);
-
-        int[][] pref = new int[m+1][n+1];
+        int m = mat.length;
+        int n = mat[0].length;
+        
+        int[][] P = new int[m + 1][n + 1];
+        
         for (int i = 1; i <= m; i++) {
             for (int j = 1; j <= n; j++) {
-                pref[i][j] =
-                    mat[i-1][j-1]
-                  + pref[i-1][j]
-                  + pref[i][j-1]
-                  - pref[i-1][j-1];
+                P[i][j] = mat[i-1][j-1] + P[i-1][j] + P[i][j-1] - P[i-1][j-1];
             }
         }
-
-        while (maxSide > 0) {
-            for (int i = 0; i + maxSide <= m; i++) {
-                for (int j = 0; j + maxSide <= n; j++) {
-                    if (helper(pref, threshold, i, j, maxSide))
-                        return maxSide;
+        
+        int maxSide = 0;
+        
+        for (int i = 1; i <= m; i++) {
+            for (int j = 1; j <= n; j++) {
+                int len = maxSide + 1;
+                
+                if (i >= len && j >= len) {
+                    int r1 = i - len + 1;
+                    int c1 = j - len + 1;
+                    
+                    // Calculate sum of square defined by (r1, c1) and (i, j)
+                    int total = P[i][j] - P[r1-1][j] - P[i][c1-1] + P[r1-1][c1-1];
+                    
+                    if (total <= threshold) {
+                        maxSide++;
+                    }
                 }
             }
-            maxSide--;
         }
-
-        return 0;
+        
+        return maxSide;
     }
-
-    private boolean helper(int[][] pref, int t, int x, int y, int side) {
-        int x2 = x + side;
-        int y2 = y + side;
-
-        int sum =
-            pref[x2][y2]
-        - pref[x][y2]
-        - pref[x2][y]
-        + pref[x][y];
-
-        return sum <= t;
-    }
-
 }
