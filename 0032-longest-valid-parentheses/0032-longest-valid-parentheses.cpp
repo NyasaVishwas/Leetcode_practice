@@ -10,18 +10,15 @@ public:
             }
             stk.push(i);
         }
-        int ans=0;
-        int curr=n;
+        int ans = 0;
+        int last_idx = n;
         while(!stk.empty()){
-            int currLen=curr-stk.top()-1;
-            curr=stk.top();
+            int current_idx = stk.top();
             stk.pop();
-            if(ans<currLen){
-                ans=currLen;
-            }
-           
+            ans = max(ans, last_idx - current_idx - 1);
+            last_idx = current_idx;
         }
-        if(curr>ans)ans=curr;
+        ans = max(ans, last_idx);
         return ans;
     }
 };
