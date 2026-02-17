@@ -9,6 +9,7 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+//Using BFS
 class Solution {
 public:
     vector<vector<int>> levelOrder(TreeNode* root) {
