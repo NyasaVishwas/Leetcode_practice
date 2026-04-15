@@ -1,10 +1,10 @@
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
-        unordered_set<int> s;
+        unordered_set<int> us;
         for (auto x: nums){
-            if (s.count(x)) return true;
-            s.insert(x);
+            if (us.count(x)) return true;
+            us.insert(x);
         }
         return false;
     }
