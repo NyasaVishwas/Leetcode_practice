@@ -8,6 +8,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- | ------- |
 | [0001-two-sum](https://github.com/NyasaVishwas/Leetcode_practice/tree/main/0001-two-sum/) | Easy |
 | [0049-group-anagrams](https://github.com/NyasaVishwas/Leetcode_practice/tree/main/0049-group-anagrams/) | Medium |
+| [0051-n-queens](https://github.com/NyasaVishwas/Leetcode_practice/tree/main/0051-n-queens/) | Hard |
 | [0217-contains-duplicate](https://github.com/NyasaVishwas/Leetcode_practice/tree/main/0217-contains-duplicate/) | Easy |
 | [0347-top-k-frequent-elements](https://github.com/NyasaVishwas/Leetcode_practice/tree/main/0347-top-k-frequent-elements/) | Medium |
 ## Hash Table
@@ -62,4 +63,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0231-power-of-two](https://github.com/NyasaVishwas/Leetcode_practice/tree/main/0231-power-of-two/) | Easy |
+## Backtracking
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0051-n-queens](https://github.com/NyasaVishwas/Leetcode_practice/tree/main/0051-n-queens/) | Hard |
 <!---LeetCode Topics End-->
