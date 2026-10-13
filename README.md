@@ -67,4 +67,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0051-n-queens](https://github.com/NyasaVishwas/Leetcode_practice/tree/main/0051-n-queens/) | Hard |
+## Database
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0182-duplicate-emails](https://github.com/NyasaVishwas/Leetcode_practice/tree/main/0182-duplicate-emails/) | Easy |
 <!---LeetCode Topics End-->
